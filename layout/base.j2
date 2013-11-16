@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="{{ resource.meta.charset }}">
+
+  <meta http-equiv="X-UA-Compatible" content="{{ resource.meta.compatibility }}">
+
+  <title>{% block title %}{{ resource.meta.title }}{% endblock %}</title>
+  <meta name="description" content="{{ resource.meta.description }}">
+  <meta name="author" content="{{ resource.meta.author }}">
+
+</head>
+<body id="{{ resource.meta.id if resource.meta.id else resource.slug }}">
+  {% block content %}
+  <div id="container">
+      {% block container %}
+      <div id="main" role="main">
+          <header class="banner clearfix">
+          {% block header -%}
+            <h1>BASIC</h1>
+            <h3>A hyde website</h3>
+          {%- endblock %}
+          {% block nav %}
+          {% from "macros.j2" import render_nav with context %}
+          {{ render_nav(menu, 'main_nav') }}
+          {% endblock %}
+          </header>
+          <section class="content">
+          {% block main %}
+          {% endblock main %}
+          </section>
+      </div>
+    {% endblock container %}
+  </div> <!--! end of #container -->
+  <footer>
+      Powered by <a href="http://ringce.com/hyde">hyde</a>.
+  </footer>
+  {% endblock content%}
+</body>
+</html>
