@@ -24,18 +24,13 @@ context:
                 css_class: about
                 type: node
                 url: about
+        social:
             -
-                name: Fit
-                description: Fitness Writeups
-                css_class: fit
-                type: node
-                url: fit
+                name: Twitter
+                url: http://twitter.com/camilo_payan
             -
-                name: Projects
-                description: Different Projects I'm Working On
-                css_class: projects
-                type: node
-                url: projects
+                name: Reddit
+                url: http://reddit.com/user/camilopayan
 meta:
     nodemeta: meta.yaml
     created: !!timestamp 2013-11-15 00:00:00

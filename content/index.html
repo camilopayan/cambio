@@ -5,16 +5,6 @@ title: BASIC - A hyde website
 description: Home page for the BASIC hyde template
 ---
 
-{% from "macros.j2" import render_excerpt with context %}
-<section class="blog_excerpt">
-{% set latest = site.content.walk_resources_sorted_by_time()|first %}
+I'm a programmer, runner, and cyclist moving and coding around in Miami, Florida
 
-{% if latest -%}
-{{ render_excerpt(latest, 'post') }}
-
-<a class="button white medium"
-    href="{{ content_url(latest.url) }}">Last!&hellip;</a>
-
-{%- endif %}
-
-</section>
+I currently work at [FIU WebComm](webcomm.fiu.edu).
