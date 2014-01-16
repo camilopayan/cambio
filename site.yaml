@@ -29,8 +29,12 @@ context:
                 name: Twitter
                 url: http://twitter.com/camilo_payan
             -
-                name: Reddit
-                url: http://reddit.com/user/camilopayan
+                name: Github 
+                url: http://github.com/camilopayan
+            -   
+                name: LinkedIn
+                url: http://www.linkedin.com/profile/view?id=38852642
+
 meta:
     nodemeta: meta.yaml
     created: !!timestamp 2013-11-15 00:00:00
