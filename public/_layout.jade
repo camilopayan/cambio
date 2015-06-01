@@ -4,5 +4,6 @@ html
 		!= partial('_partials/head_title')
 		link(rel="stylesheet" href="/main.css")
 	body
-		!= partial('_partials/header')
+		if current.path[0] != 'index'
+			!= partial('_partials/header')
 		!= yield
