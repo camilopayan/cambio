@@ -2,7 +2,10 @@ doctype html
 html
 	head
 		!= partial('_partials/head_title')
-		link(rel="stylesheet" href="/main.css")
+		if current.path[0] == 'index'
+			link(rel="stylesheet" href="/styles/home.css")
+		else
+			link(rel="stylesheet" href="/styles/main.css
 	body
 		if current.path[0] != 'index'
 			!= partial('_partials/header')
