@@ -2,11 +2,8 @@ doctype html
 html
 	head
 		!= partial('_partials/head_title')
-		if current.path[0] == 'index'
-			link(rel="stylesheet" href="/styles/home.css")
-		else
-			link(rel="stylesheet" href="/styles/main.css
+		link(rel="stylesheet", href="styles/main.css")
 	body
-		if current.path[0] != 'index'
-			!= partial('_partials/header')
-		!= yield
+		!= partial('_partials/header')
+		div(id="content")
+			!= yield
