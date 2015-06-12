@@ -62,7 +62,6 @@ The rest of our `bootstrap_database.php` file will look like this:
 	 //You can store the fake data, as well.
 	 $insertedFakeData = $populator->execute();
 
-That's the long and short of it. Your database should now be populated with some
-fake data. Faker will take a look at the metadata and names of your columns and
-try to choose appropriate fake data to fill it with. For example, your name
-columns won't be filled with Lorem Ipsum text, but regular name-sounding text.
+That's the long and short of it. Faker has filled your database with fake data. Faker will take a look at the metadata and names of your columns and
+try to choose appropriate fake data to fill it with. For example, Faker will fill a column `name`
+with real-looking names, not lorem ipsum.
