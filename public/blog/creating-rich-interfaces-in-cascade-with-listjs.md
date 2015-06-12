@@ -1,5 +1,3 @@
-# Creating rich interfaces in Cascade with List.js
-
 So a common problem I run into with Cascade is that we'd need a page with a lot of similar content
 that needs to be searchable, sortable, the works. In the past, we've accomplished this by having a
 few php files, a backend interface for adding and removing items, and a database to hold our information.

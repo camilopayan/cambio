@@ -1,5 +1,3 @@
-# Using Faker and Doctrine 2
-
 ## Introduction
 
 [Faker](https://github.com/fzaninotto/Faker) is a great PHP library for creating
