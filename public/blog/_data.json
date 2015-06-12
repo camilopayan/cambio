@@ -1,7 +1,12 @@
 {
-	"faker-doctrin": {
+	"faker-doctrine": {
 		"title": "Using Faker with Doctrine 2",
 		"blurb": "Use Faker to add fake data to your Doctrine setup.",
 		"pubdate": "June 11, 2015"
+	},
+	"cascadecms-listjs": {
+		"title": "Creating rich interfaces in Cascade with List.js",
+		"blurb": "Get an interactive, sortable, searchable list of elements using List JS. It's very easy to set up in Cascade!.",
+		"pubdate": "June 4, 2015"
 	}
 }
