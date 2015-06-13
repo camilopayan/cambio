@@ -3,8 +3,11 @@
 body, html, header, footer
   padding: 0
   margin: 0
+
+body
+  background-color: $bodybg
 header
-  background-color: green
+  background-color: $headbg
   h1
     font-family: $raleway-stack
     font-size: 2em
@@ -14,6 +17,9 @@ header
     padding: 1.1em 0
     a
       text-decoration: none
+      color: black
+      :visited
+        color:black
 
 nav
   display: flex
@@ -25,20 +31,17 @@ nav
     display: block
     padding: 1em
     background: white
+    text-decoration: none
+    color: black
+    :visited
+      color:black
 
 #content
-  background: #ddd
   padding: 0.5em 1em 0
   font-family: $raleway-stack
   font-weight: 400
+  max-width: $max-width
+  margin: 0 auto
   h2
     font-weight: 700
-
-#home-section
-  display: flex
-  max-width: 800px
-  flex-wrap: wrap
-  div
-    min-width: 200px
-    width: 50%
 
