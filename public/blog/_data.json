@@ -8,5 +8,9 @@
 		"title": "Creating rich interfaces in Cascade with List.js",
 		"blurb": "Get an interactive, sortable, searchable list of elements using List JS. It's very easy to set up in Cascade!.",
 		"pubdate": "June 4, 2015"
+	},
+	"index":{
+		"title": "Articles",
+		"layout": "../_layout"
 	}
 }

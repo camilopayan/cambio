@@ -1,0 +1,11 @@
+doctype html
+html
+	head
+		!= partial('../_partials/head_title')
+		link(rel="stylesheet", href="/css/main.css")
+	body
+		!= partial('../_partials/header')
+		div(id="content")
+			!= partial('../_partials/nav')
+			h2= title
+			!= yield
