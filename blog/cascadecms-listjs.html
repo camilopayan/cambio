@@ -1,0 +1,41 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="/css/main.css"></head><body><header><h1> <a href="/index">cam.bio</a></h1></header><div id="content"><nav><a href="/blog">Blog</a><a href="/about">About</a><a href="https://www.linkedin.com/in/cpayan">Resume</a></nav><h2>Creating rich interfaces in Cascade with List.js</h2><p>So a common problem I run into with Cascade is that we&#39;d need a page with a lot of similar content
+that needs to be searchable, sortable, the works. In the past, we&#39;ve accomplished this by having a
+few php files, a backend interface for adding and removing items, and a database to hold our information.</p>
+<p>Why do that, when we can use a little of what Cascade does best: leveraging XSLT/Velocity to transform data, and
+using a great Javascript library called <a href="http://www.listjs.com/">List.js</a>?</p>
+<p>The great thing about List.js is that it&#39;ll wire up searching and sorting client-side with any
+list that contains the metadata that needs to be searched or sorted on. For example, on the
+<a href="social.fiu.edu">FIU Social website</a>, the social media accounts are organized into an unordered list, where 
+the list items look like this:</p>
+<pre><code>&lt;li&gt;
+     &lt;img src=&quot;_assets/images/offices-services/bbccampuslife.png&quot;&gt;
+    &lt;h3 class=&quot;name&quot;&gt;
+        &lt;a href=&quot;http://bbcclo.fiu.edu/&quot;&gt;Campus Life at Biscayne Bay Campus&lt;/a&gt;
+    &lt;/h3&gt;
+    &lt;p&gt;The Department of Campus Life provides a variety of programs and services to the students and University community&lt;/p&gt;
+    &lt;p class=&quot;social-links&quot;&gt;
+        &lt;a class=&quot;webicon facebook&quot; href=&quot;https://www.facebook.com/CampusLifeBBC&quot;&gt;facebook&lt;/a&gt;
+    &lt;/p&gt;
+    &lt;p class=&quot;categories&quot;&gt;Offices and Services&lt;/p&gt;
+&lt;/li&gt;
+</code></pre><p>When it comes to List.js, after telling it where to look for the list for searching and sorting. The classes with data
+are passed to List.js like so:</p>
+<pre><code> var options = {
+    valueNames: [ &#39;name&#39;, &#39;facebook&#39;, &#39;twitter&#39;, &#39;tumblr&#39;, &#39;instagram&#39;, &#39;vine&#39;, &#39;categories&#39; ],
+    listClass: &#39;social-list&#39;
+ };
+
+ var socialList = new List(&#39;socials&#39;, options);
+</code></pre><p>List.js will even search through the parts of your HTML that are hidden, like, in this case, the <code>categories</code> class.
+Moreover, a search bar inside the id given to List.js will be wired up to search the list. In this case, we passed a 
+<code>socials</code> id was sent to List.js. Inside is the listClass <code>social-list</code> which holds our data. There is also a search 
+input with class <code>search</code> that will serve as our search bar. </p>
+<p>The HTML looks like this: </p>
+<pre><code>&lt;div id=&quot;socials&quot;&gt;
+     &lt;input class=&quot;search&quot; placeholder=&quot;Search&quot; type=&quot;text&quot;&gt;
+    &lt;ul class=&quot;social-list&quot;&gt;
+    [...]
+    &lt;/ul&gt;
+ &lt;/div&gt;
+</code></pre><p>And there you go. A nice interface that can still be used from Cascade. List.js is pretty fast and doesn&#39;t have any trouble
+with a responsive, semantic setup.</p></div></body></html>
