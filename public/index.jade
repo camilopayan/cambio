@@ -6,6 +6,7 @@ p(id="tagline-home") I'm a web developer based in Miami. I write code, run aroun
 section(id="home-section")
 	div(id="writing")
 		for article, slug in public.blog._data
-			a(href="/blog/#{slug}")
-				h3= article.title
-			p= article.blurb
+			if slug != 'index'
+				a(href="/blog/#{slug}")
+					h3= article.title
+				p= article.blurb
