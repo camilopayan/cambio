@@ -1,4 +1,3 @@
 nav
-	a(href="/blog") Blog
-	a(href="/about") About
-	a(href="https://www.linkedin.com/in/cpayan") Resume
+	for url, name in public._data.nav
+		a(href="/#{url}" class=( url === current.path[0] ? 'current' : ''))= name

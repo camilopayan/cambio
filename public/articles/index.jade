@@ -1,5 +1,5 @@
-for article, slug in public.blog._data
+for article, slug in public.articles._data
 	if slug != 'index'
-		a(href='/blog/#{slug}')
+		a(href='/articles/#{slug}')
 			h2= article.title
 		p= article.blurb

@@ -26,6 +26,7 @@ header
     font-family: $raleway-stack
     text-align: center
     color: white
+    margin-bottom: 0
 
 nav
   display: flex
@@ -36,14 +37,14 @@ nav
   a
     display: block
     padding: 1em
-    background: white
     text-decoration: none
     color: black
     :visited
       color:black
+  a.current
+    background: $green
 
 #content
-  padding: 0.5em 1em 0
   font-family: $raleway-stack
   font-weight: 400
   max-width: $max-width
