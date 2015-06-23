@@ -52,3 +52,17 @@ nav
   h2
     font-weight: 700
 
+#greeting-home
+  font-size: 2.75em
+  font-weight: 700
+
+#home-section
+  @include media($breakpoint)
+    @include outer-container
+  div
+    @include media($breakpoint)
+      @include span-columns(6)
+    ul
+      list-style: none outside
+      padding: 0
+      

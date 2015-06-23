@@ -1,12 +1,24 @@
-h1(id="greeting-home") 
-	span Hello, I'm Camilo Payan.
+div(id="greeting-home") 
+	span Hello,
 
-p(id="tagline-home") I'm a web developer based in Miami. I write code, run around, and play with dogs.
+p(id="tagline-home").
+	I'm a web developer based in Miami. I write code, run around, and play with dogs. 
+	I work and write in PHP, Javascript, HTML and CSS. I'm always engrossed in the 
+	ever-changing web development landscape.
 
 section(id="home-section")
-	div(id="writing")
-		for article, slug in public.blog._data
-			if slug != 'index'
-				a(href="/blog/#{slug}")
-					h3= article.title
-				p= article.blurb
+	div(class="writing")
+		h2 Read some articles
+		ul
+			for article, slug in public.articles._data
+				if slug != 'index'
+					li
+						a(href="/articles/#{slug}")
+							h3= article.title
+						p= article.blurb
+	div(class="links")
+		h2 Find me around the web
+		ul
+			for link, network in public._data.links
+				li
+					a(href="#{link}")= network
