@@ -59,10 +59,12 @@ nav
 #home-section
   @include media($breakpoint)
     @include outer-container
-  div
+  div ul
+    list-style: none outside
+    padding: 0
+  div.writing
     @include media($breakpoint)
-      @include span-columns(6)
-    ul
-      list-style: none outside
-      padding: 0
-      
+      @include span-columns(8)
+  div.links
+    @include media($breakpoint)
+      @include span-columns(4)

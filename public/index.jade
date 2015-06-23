@@ -8,7 +8,7 @@ p(id="tagline-home").
 
 section(id="home-section")
 	div(class="writing")
-		h2 Read some articles
+		h2 Read articles
 		ul
 			for article, slug in public.articles._data
 				if slug != 'index'
@@ -17,7 +17,7 @@ section(id="home-section")
 							h3= article.title
 						p= article.blurb
 	div(class="links")
-		h2 Find me around the web
+		h2 Find me
 		ul
 			for link, network in public._data.links
 				li
