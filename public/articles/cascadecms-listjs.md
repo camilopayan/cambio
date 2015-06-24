@@ -11,27 +11,44 @@ list that contains the metadata that needs to be searched or sorted on. For exam
 the list items look like this:
 
     <li>
-	 	<img src="_assets/images/offices-services/bbccampuslife.png">
-		<h3 class="name">
-			<a href="http://bbcclo.fiu.edu/">Campus Life at Biscayne Bay Campus</a>
-		</h3>
-		<p>The Department of Campus Life provides a variety of programs and services to the students and University community</p>
-		<p class="social-links">
-			<a class="webicon facebook" href="https://www.facebook.com/CampusLifeBBC">facebook</a>
-		</p>
-		<p class="categories">Offices and Services</p>
-	</li>
+      <img src="_assets/images/offices-services/bbccampuslife.png">
+      <h3 class="name">
+         <a href="http://bbcclo.fiu.edu/">
+            Campus Life at Biscayne Bay Campus
+         </a>
+      </h3>
+      <p>
+         The Department of Campus Life provides a variety 
+         of programs and services to the students and 
+         University community
+      </p>
+      <p class="social-links">
+         <a class="webicon facebook" 
+            href="https://www.facebook.com/CampusLifeBBC">
+            facebook
+         </a>
+      </p>
+      <p class="categories">Offices and Services</p>
+   </li>
 
 When it comes to List.js, after telling it where to look for the list for searching and sorting. The classes with data
 are passed to List.js like so:
 
     
-	 var options = {
-		valueNames: [ 'name', 'facebook', 'twitter', 'tumblr', 'instagram', 'vine', 'categories' ],
-		listClass: 'social-list'
-	 };
+    var options = {
+      valueNames: [
+                     'name',
+                     'facebook',
+                     'twitter',
+                     'tumblr',
+                     'instagram',
+                     'vine',
+                     'categories'
+                  ],
+      listClass: 'social-list'
+    };
 
-	 var socialList = new List('socials', options);
+    var socialList = new List('socials', options);
 
 List.js will even search through the parts of your HTML that are hidden, like, in this case, the `categories` class.
 Moreover, a search bar inside the id given to List.js will be wired up to search the list. In this case, we passed a 
@@ -41,11 +58,11 @@ input with class `search` that will serve as our search bar.
 The HTML looks like this: 
 
     <div id="socials">
-	 	<input class="search" placeholder="Search" type="text">
-		<ul class="social-list">
-		[...]
-		</ul>
-	 </div>
+      <input class="search" placeholder="Search" type="text">
+      <ul class="social-list">
+      [...]
+      </ul>
+    </div>
 
 And there you go. A nice interface that can still be used from Cascade. List.js is pretty fast and doesn't have any trouble
 with a responsive, semantic setup.

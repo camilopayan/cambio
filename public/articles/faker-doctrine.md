@@ -27,10 +27,11 @@ entity manager from Doctrine.
 	 $path = array('PATH TO YOUR ENTITIES');
 	 $devMode = true;
 
-	 $config = Setup::createAnnotationMetadataConfiguration($path, $devMode);
+	 $config = Setup::createAnnotationMetadataConfiguration(
+		$path, $devMode);
 
 	 $dbParams = array(
-	 	'driver'		=> 'pdo_mysql',
+		'driver'		=> 'pdo_mysql',
 		'user'		=> 'YOUR DATABASE USERNAME',
 		'password'	=> 'YOUR DATABASE PASSWORD',
 		'dbname'		=> 'YOUR DATABASE NAME',
@@ -47,13 +48,15 @@ The rest of our `bootstrap_database.php` file will look like this:
     //Create your Faker generator
     $generator = \Faker\Factory::create();
 
-	 /* Give the Faker populator the EntityManager object from Doctrine, as well
-	 *  as the Faker Generator
+	 /* Give the Faker populator the EntityManager object from 
+     * Doctrine, as well as the Faker Generator
 	 */
 	 $populator = new Faker\ORM\Doctrine\Populator($generator, $em);
-	 /* Make sure to use the fully qualified class name for your Entity, in this
-	 *  case it's \App\Entity\User, and then tell Faker just how many of those
-    *  you want. Here, we're making 5 users.
+
+	 /* Make sure to use the fully qualified class name for 
+     * your Entity, in this case it's \App\Entity\User, and then
+     * tell Faker just how many of those you want. Here, we're 
+     * making 5 users.
 	 */
 	 $populator->AddEntity('\App\Entity\User', 5);
 	 
