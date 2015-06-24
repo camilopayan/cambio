@@ -57,14 +57,12 @@ nav
   font-weight: 700
 
 #home-section
-  @include media($breakpoint)
-    @include outer-container
+  display: flex
+  flex-flow: row wrap
   div ul
     list-style: none outside
     padding: 0
   div.writing
-    @include media($breakpoint)
-      @include span-columns(8)
+    flex: 0 0 330px
   div.links
-    @include media($breakpoint)
-      @include span-columns(4)
+    flex: 0 0 167px
