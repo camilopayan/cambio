@@ -9,3 +9,7 @@ html
 			!= partial('../_partials/nav')
 			h2= title
 			!= yield
+		script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js")
+		script.
+			hljs.initHighlightingOnLoad();
+
